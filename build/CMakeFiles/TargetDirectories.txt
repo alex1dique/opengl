@@ -1,0 +1,1 @@
+/home/linux/test/esfera con material y luz/build/CMakeFiles/hello.dir
