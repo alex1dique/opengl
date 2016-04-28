@@ -3,5 +3,5 @@ Repositorio Con proyectos Opengl
  
 
 #José  Alexander Guandique Flores GF12011
-#Dámaris Abigaíl Alas Guzmán AG120124
+#Dámaris Abigaíl Alas Guzmán AG12024
   
