@@ -47,44 +47,44 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/linux/test/esfera con material y luz"
+CMAKE_SOURCE_DIR = /home/acer/Escritorio/opengl/opengl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/linux/test/esfera con material y luz/build"
+CMAKE_BINARY_DIR = /home/acer/Escritorio/opengl/opengl/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/hello.dir
+# Target rules for target CMakeFiles/Esfera.dir
 
 # All Build rule for target.
-CMakeFiles/hello.dir/all:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/linux/test/esfera con material y luz/build/CMakeFiles"  1
-	@echo "Built target hello"
-.PHONY : CMakeFiles/hello.dir/all
+CMakeFiles/Esfera.dir/all:
+	$(MAKE) -f CMakeFiles/Esfera.dir/build.make CMakeFiles/Esfera.dir/depend
+	$(MAKE) -f CMakeFiles/Esfera.dir/build.make CMakeFiles/Esfera.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/acer/Escritorio/opengl/opengl/build/CMakeFiles  1
+	@echo "Built target Esfera"
+.PHONY : CMakeFiles/Esfera.dir/all
 
 # Include target in all.
-all: CMakeFiles/hello.dir/all
+all: CMakeFiles/Esfera.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/hello.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/linux/test/esfera con material y luz/build/CMakeFiles" 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hello.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/linux/test/esfera con material y luz/build/CMakeFiles" 0
-.PHONY : CMakeFiles/hello.dir/rule
+CMakeFiles/Esfera.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acer/Escritorio/opengl/opengl/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Esfera.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/acer/Escritorio/opengl/opengl/build/CMakeFiles 0
+.PHONY : CMakeFiles/Esfera.dir/rule
 
 # Convenience name for target.
-hello: CMakeFiles/hello.dir/rule
-.PHONY : hello
+Esfera: CMakeFiles/Esfera.dir/rule
+.PHONY : Esfera
 
 # clean rule for target.
-CMakeFiles/hello.dir/clean:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/clean
-.PHONY : CMakeFiles/hello.dir/clean
+CMakeFiles/Esfera.dir/clean:
+	$(MAKE) -f CMakeFiles/Esfera.dir/build.make CMakeFiles/Esfera.dir/clean
+.PHONY : CMakeFiles/Esfera.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/hello.dir/clean
+clean: CMakeFiles/Esfera.dir/clean
 .PHONY : clean
 
 #=============================================================================

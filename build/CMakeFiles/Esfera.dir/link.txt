@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/Esfera.dir/main.cpp.o  -o Esfera -rdynamic -lGLU -lGL -lSM -lICE -lX11 -lXext -lglut -lXmu -lXi 
