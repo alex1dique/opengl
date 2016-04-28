@@ -1,1 +1,1 @@
-/home/linux/test/esfera con material y luz/build/CMakeFiles/hello.dir
+/home/acer/Escritorio/opengl/opengl/build/CMakeFiles/Esfera.dir

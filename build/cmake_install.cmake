@@ -1,4 +1,4 @@
-# Install script for directory: /home/linux/test/esfera con material y luz
+# Install script for directory: /home/acer/Escritorio/opengl/opengl
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/linux/test/esfera con material y luz/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/acer/Escritorio/opengl/opengl/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/linux/test/esfera con material y luz/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/acer/Escritorio/opengl/opengl/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

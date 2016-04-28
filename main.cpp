@@ -1,12 +1,11 @@
+// DESARROLLADORES
+//  José  Alexander Guandique Flores GF12011
+//  Dámaris Abigaíl Alas Guzmán AG120124
 #include <GL/gl.h>
 #include <GL/glut.h>
 #include <stdlib.h>
 
 //Definimos variables
-double rotate_y=0;
-double rotate_x=0;
-double rotate_z=0;
-
 float mat_amb0 = 0;
 float mat_diff0 = 0;
 float mat_spec0 = 0;
@@ -18,13 +17,73 @@ float mat_diff2 = 0;
 float mat_spec2 = 0;
 float shin = 0;
 
+float luz_position_x=0;
+float luz_position_y=0;
+float luz_position_z=0;
+//funcion para mover la luz con el mouse
+void luz(float x,float y,float z){
+	 
+	 //propiedades de la luz
+
+GLfloat luz_ambient []  = {1.0, 1.0, 0.0, 1.0 };
+GLfloat luz_diffuse []  = { 1.0, 1.0, 1.0, 1.0 };
+GLfloat luz_specular [] = { 1.0, 1.0, 1.0, 1.0 };
+GLfloat luz_position [] = { luz_position_x,luz_position_y,luz_position_z, 0.0 };
+GLfloat foco_direccion [] = { 0.0, 0.0, -1.0 };
+    //setLuces
+    
+glLightfv(GL_LIGHT0, GL_AMBIENT, luz_ambient);//intensidad ambiente RGBA de la luz
+glLightfv(GL_LIGHT0, GL_DIFFUSE, luz_diffuse);//intensidad difusa RGBA de la luz
+glLightfv(GL_LIGHT0, GL_SPECULAR, luz_specular);//intensidad especular RGBA de la luz
+glLightfv(GL_LIGHT0, GL_POSITION, luz_position);//posición (x,y,z,w) de la luz
+glLightfv(GL_LIGHT0, GL_SPOT_DIRECTION, foco_direccion);//dirección (x,y,z) del foco de luz
+	}
+	
+void mouse(int button, int state,int x, int y){
+switch(button){
+case GLUT_RIGHT_BUTTON:
+if(state == GLUT_DOWN){
+luz_position_x+=190;
+ luz(luz_position_x,luz_position_y,luz_position_z); 
+}
+if(state == GLUT_UP){
+luz_position_x+=190;
+ luz(luz_position_x,luz_position_y,luz_position_z); 
+}
+break;
+case GLUT_MIDDLE_BUTTON:
+if(state == GLUT_DOWN){
+luz_position_z+=190;
+luz(luz_position_x,luz_position_y,luz_position_z); 
+}
+if(state == GLUT_UP){
+luz_position_z+=190;
+ luz(luz_position_x,luz_position_y,luz_position_z); 
+}
+break;
+case  GLUT_LEFT_BUTTON:
+if(state == GLUT_DOWN){
+luz_position_y+=190;
+ luz(luz_position_x,luz_position_y,luz_position_z); 
+}
+if(state == GLUT_UP){
+luz_position_y+=190;
+ luz(luz_position_x,luz_position_y,luz_position_z); 
+}
+break;
+}
+   glutPostRedisplay(); 
+}
+
 void material(float mat_amb0,float mat_amb1,float mat_amb2,float mat_diff0,float mat_diff1,float mat_spec0,float mat_spec1,float mat_spec2,float shin)
 {
+ 
   //Propiedades del material 
         GLfloat mat_ambient[] = { mat_amb0,mat_amb1,mat_amb2};
         GLfloat mat_diffuse[] = { mat_diff0,mat_diff1,mat_diff2};
         GLfloat mat_specular[] = {mat_spec0,mat_spec1,mat_spec2};
         GLfloat shininess [] = {shin};
+ 
   //setMaterial
     glMaterialfv(GL_FRONT, GL_AMBIENT, mat_ambient);
     glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
@@ -41,6 +100,7 @@ void init(void)
  glEnable(GL_LIGHT0); //Activamos las luces en 0
  glDepthFunc(GL_LESS); //comparación de profundidad
  glEnable(GL_DEPTH_TEST); //activa GL_DEPTH_TEST
+ 
 }
 void reshape(int w, int h)
 {
@@ -64,45 +124,14 @@ void display(void)
  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
  glMatrixMode( GL_MODELVIEW_MATRIX );
  glLoadIdentity();
-// Rotar en el eje X,Y y Z
- glRotatef( rotate_x, 1.0, 0.0, 0.0 );
- glRotatef( rotate_y, 0.0, 1.0, 0.0 );
- glRotatef( rotate_z, 0.0, 0.0, 1.0 );
-// Dibujamos una "Tetera" y le aplico el material
  glPushMatrix();
-    glutSolidSphere(200,270,270);
-    //glutSolidTorus(200,270,270,270);
+ glutSolidSphere(200,270,270);//dibujando la esfera
+   
  glFlush();
 }
 
 // Función para controlar teclas especiales
-void specialKeys( int key, int x, int y )
-{
- 
-    //  Flecha derecha: aumentar rotación 7 grados
-    if (key == GLUT_KEY_RIGHT)
-        rotate_y += 7;
- 
-    //  Flecha izquierda: rotación en eje Y negativo 7 grados
-    else if (key == GLUT_KEY_LEFT)
-        rotate_y -= 7;
-    //  Flecha arriba: rotación en eje X positivo 7 grados
-    else if (key == GLUT_KEY_UP)
-        rotate_x += 7;
-    //  Flecha abajo: rotación en eje X negativo 7 grados
-    else if (key == GLUT_KEY_DOWN)
-        rotate_x -= 7;
-    //  Tecla especial F2 : rotación en eje Z positivo 7 grados
-    else if (key == GLUT_KEY_F2)
-        rotate_z += 7;
-    //  Tecla especial F2 : rotación en eje Z negativo 7 grados
-    else if (key == GLUT_KEY_F2)
-        rotate_z -= 7;
- 
-    //  Solicitar actualización de visualización
-    glutPostRedisplay();
- 
-}
+
  void keyboard(unsigned char key, int x, int y)
 {
     //control de teclas que hacen referencia a Escalar y transladar el cubo en los ejes X,Y,Z.
@@ -211,9 +240,9 @@ int main(int argc, char **argv)
  glutCreateWindow ("Esfera con Materiales y Luz");
 // Inicializamos el sistema
  init();
- 
+ //calls
+ glutMouseFunc(mouse);//llamando a la funcion mouse
  glutDisplayFunc(display);//llamando a display
- glutSpecialFunc(specialKeys);//llamando a la funcion specialKeys
  glutKeyboardFunc(keyboard);// llamando a funcion keyboard
  glutReshapeFunc(reshape);//llamando a la funcion reshape
  glutMainLoop();

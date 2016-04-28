@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/acer/Escritorio/opengl/opengl/main.cpp" "/home/acer/Escritorio/opengl/opengl/build/CMakeFiles/hello.dir/main.cpp.o"
+  "/home/acer/Escritorio/opengl/opengl/main.cpp" "/home/acer/Escritorio/opengl/opengl/build/CMakeFiles/Esfera.dir/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

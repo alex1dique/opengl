@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/linux/test/esfera con material y luz"
+CMAKE_SOURCE_DIR = /home/acer/Escritorio/opengl/opengl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/linux/test/esfera con material y luz/build"
+CMAKE_BINARY_DIR = /home/acer/Escritorio/opengl/opengl/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hello.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/hello.dir/flags.make
 
 CMakeFiles/hello.dir/main.cpp.o: CMakeFiles/hello.dir/flags.make
 CMakeFiles/hello.dir/main.cpp.o: ../main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/linux/test/esfera con material y luz/build/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/acer/Escritorio/opengl/opengl/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hello.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/main.cpp.o -c "/home/linux/test/esfera con material y luz/main.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/main.cpp.o -c /home/acer/Escritorio/opengl/opengl/main.cpp
 
 CMakeFiles/hello.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/linux/test/esfera con material y luz/main.cpp" > CMakeFiles/hello.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/acer/Escritorio/opengl/opengl/main.cpp > CMakeFiles/hello.dir/main.cpp.i
 
 CMakeFiles/hello.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/linux/test/esfera con material y luz/main.cpp" -o CMakeFiles/hello.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/acer/Escritorio/opengl/opengl/main.cpp -o CMakeFiles/hello.dir/main.cpp.s
 
 CMakeFiles/hello.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/hello.dir/main.cpp.o.requires
@@ -81,15 +81,15 @@ hello_EXTERNAL_OBJECTS =
 
 hello: CMakeFiles/hello.dir/main.cpp.o
 hello: CMakeFiles/hello.dir/build.make
-hello: /usr/lib/i386-linux-gnu/libGLU.so
-hello: /usr/lib/i386-linux-gnu/libGL.so
-hello: /usr/lib/i386-linux-gnu/libSM.so
-hello: /usr/lib/i386-linux-gnu/libICE.so
-hello: /usr/lib/i386-linux-gnu/libX11.so
-hello: /usr/lib/i386-linux-gnu/libXext.so
-hello: /usr/lib/i386-linux-gnu/libglut.so
-hello: /usr/lib/i386-linux-gnu/libXmu.so
-hello: /usr/lib/i386-linux-gnu/libXi.so
+hello: /usr/lib/x86_64-linux-gnu/libGLU.so
+hello: /usr/lib/x86_64-linux-gnu/libGL.so
+hello: /usr/lib/x86_64-linux-gnu/libSM.so
+hello: /usr/lib/x86_64-linux-gnu/libICE.so
+hello: /usr/lib/x86_64-linux-gnu/libX11.so
+hello: /usr/lib/x86_64-linux-gnu/libXext.so
+hello: /usr/lib/x86_64-linux-gnu/libglut.so
+hello: /usr/lib/x86_64-linux-gnu/libXmu.so
+hello: /usr/lib/x86_64-linux-gnu/libXi.so
 hello: CMakeFiles/hello.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable hello"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello.dir/link.txt --verbose=$(VERBOSE)
@@ -106,6 +106,6 @@ CMakeFiles/hello.dir/clean:
 .PHONY : CMakeFiles/hello.dir/clean
 
 CMakeFiles/hello.dir/depend:
-	cd "/home/linux/test/esfera con material y luz/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/linux/test/esfera con material y luz" "/home/linux/test/esfera con material y luz" "/home/linux/test/esfera con material y luz/build" "/home/linux/test/esfera con material y luz/build" "/home/linux/test/esfera con material y luz/build/CMakeFiles/hello.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/acer/Escritorio/opengl/opengl/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/acer/Escritorio/opengl/opengl /home/acer/Escritorio/opengl/opengl /home/acer/Escritorio/opengl/opengl/build /home/acer/Escritorio/opengl/opengl/build /home/acer/Escritorio/opengl/opengl/build/CMakeFiles/hello.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hello.dir/depend
 
